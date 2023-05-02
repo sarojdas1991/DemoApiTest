@@ -12,7 +12,7 @@ public class BasicAuthApiCall {
         requestPayload.put("email", "APItestDemo5@gmail.com");
         requestPayload.put("password", "password@123");
         Response response1 = RestAssured.given().baseUri("https://postman-echo.com/basic-auth")
-                .auth().preemptive().basic("postman", "password")
+                .auth().basic("postman", "password")
 //                .contentType("application/json").header("Authorization","Bearer"+token).
                 .when().post().then()
                 .log().all().extract().response();

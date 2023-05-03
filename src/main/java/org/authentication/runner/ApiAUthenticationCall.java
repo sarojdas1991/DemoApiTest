@@ -17,8 +17,8 @@ public interface ApiAUthenticationCall extends ApiReqData {
     HawkAuthentication hawkauth=new HawkAuthentication();
 
     public static void main(String[] args) {
-        apikey.ApiKeyAuth();
-//        basic.BasicAuth();
+//        apikey.ApiKeyAuth();
+        basic.BasicAuth();
 //        bt.BeaerTokenAuth();
 //        dt.DigestAut();
 //        outh1.Outh1Auth();

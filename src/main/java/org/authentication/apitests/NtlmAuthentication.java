@@ -1,9 +1,10 @@
-package org.authentication;
+package org.authentication.apitests;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.authentication.runner.ApiAUthenticationCall;
 
-public class NtlmAuthentication implements ApiAUthenticationCall{
+public class NtlmAuthentication implements ApiAUthenticationCall {
     public void NtlmAuth(){
         Response response= RestAssured.given().baseUri(PostmanUrl)
                 .auth().ntlm(postmanUId,PostmanPw,"asjk","domain").

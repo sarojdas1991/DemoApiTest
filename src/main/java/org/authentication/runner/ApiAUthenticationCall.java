@@ -1,4 +1,7 @@
-package org.authentication;
+package org.authentication.runner;
+
+import org.authentication.apitests.*;
+import org.authentication.utils.ApiReqData;
 
 public interface ApiAUthenticationCall extends ApiReqData {
     ApiKeyAuthentication apikey=new ApiKeyAuthentication();
@@ -14,7 +17,7 @@ public interface ApiAUthenticationCall extends ApiReqData {
     HawkAuthentication hawkauth=new HawkAuthentication();
 
     public static void main(String[] args) {
-//        apikey.ApiKeyAuth();
+        apikey.ApiKeyAuth();
 //        basic.BasicAuth();
 //        bt.BeaerTokenAuth();
 //        dt.DigestAut();
@@ -22,9 +25,9 @@ public interface ApiAUthenticationCall extends ApiReqData {
 //        outh2.outh2Auth();
 //        ntlm.NtlmAuth();
 //        akaauth.Akamai();
-//        jwt.JwtAUth();
+//       jwt.JwtAUth();
 //        awssigneture.AwsAuth();
-        hawkauth.HawkAuth();
+//        hawkauth.HawkAuth();
 
     }
 

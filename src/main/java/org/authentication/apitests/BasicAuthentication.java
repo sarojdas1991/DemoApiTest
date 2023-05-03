@@ -1,9 +1,10 @@
-package org.authentication;
+package org.authentication.apitests;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.authentication.runner.ApiAUthenticationCall;
 
-public class BasicAuthentication implements ApiAUthenticationCall{
+public class BasicAuthentication implements ApiAUthenticationCall {
     public  void BasicAuth(){
 //        Response response=RestAssured.given().baseUri("https://postman-echo.com")
 //                          .auth().basic("postman", "password").

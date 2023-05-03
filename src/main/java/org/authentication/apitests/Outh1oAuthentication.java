@@ -1,8 +1,8 @@
-package org.authentication;
+package org.authentication.apitests;
 
 import io.restassured.RestAssured;
-import io.restassured.authentication.OAuthSignature;
 import io.restassured.response.Response;
+import org.authentication.runner.ApiAUthenticationCall;
 
 public class Outh1oAuthentication implements ApiAUthenticationCall {
     public void Outh1Auth(){

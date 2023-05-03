@@ -1,4 +1,4 @@
-package org.authentication;
+package org.authentication.utils;
 
 public interface ApiReqData {
     String PostmanUrl ="https://postman-echo.com";

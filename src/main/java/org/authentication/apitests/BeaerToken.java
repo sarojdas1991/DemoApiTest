@@ -1,10 +1,11 @@
-package org.authentication;
+package org.authentication.apitests;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import net.minidev.json.JSONObject;
+import org.authentication.runner.ApiAUthenticationCall;
 
-public class BeaerToken implements ApiAUthenticationCall{
+public class BeaerToken implements ApiAUthenticationCall {
 //    public static void main(String[] args) {
     public void BeaerTokenAuth(){
         JSONObject requestPayload = new JSONObject();

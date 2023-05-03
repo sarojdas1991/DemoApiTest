@@ -1,7 +1,8 @@
-package org.authentication;
+package org.authentication.apitests;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.authentication.runner.ApiAUthenticationCall;
 
 public class DigestAuth implements ApiAUthenticationCall {
 //    public static void main(String[] args)

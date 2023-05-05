@@ -24,4 +24,10 @@ public class ApiUtils {
     public static final String AwsToken="AWS4-HMAC-SHA256 Credential=APITEST/20230502/us-east-1/execute-api/aws4_request, SignedHeaders=host;x-amz-date, Signature=3d5fcd0f030e1df076725000381657e1ae74c278978e373d5eea0adad510f5f7";
     public static final String HawkToken="Hawk id=\"dh37fgj492je\", ts=\"1683044507\", nonce=\"HEbG-s\", mac=\"OpKwRZ1L4bPh2mHpKHd61QfD1lT9uZ/9iDP0WacOwME=\"";
 
+    public  static final int Status_Ok=200;
+    public  static final int Status_Created=201;
+    public  static final int Status_NotFound=404;
+    public static final int Status_NoContent=204;
+
+
 }

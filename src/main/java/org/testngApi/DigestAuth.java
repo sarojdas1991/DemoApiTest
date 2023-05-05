@@ -39,7 +39,8 @@ public class DigestAuth {
         response= requestSpecification
                 .auth().digest(prop.getProperty("postmanUId"),prop.getProperty("PostmanPw")).
                 when().get(prop.getProperty("DigestEndPoint")).
-                then().log().all().extract().response();
+                then().
+                log().all().extract().response();
 
     }
     @AfterTest

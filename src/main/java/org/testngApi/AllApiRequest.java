@@ -9,7 +9,7 @@ import org.testng.annotations.*;
 import java.io.IOException;
 import java.util.Properties;
 
-import static org.testngApi.Utility.readPropertiesFile;
+import static org.basicutility.utils.Utility.readPropertiesFile;
 
 public class AllApiRequest {
     Properties prop;

@@ -8,9 +8,9 @@ import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.util.Properties;
-import org.authentication.utils.ApiUtils;
+import org.basicutility.utils.ApiUtils;
 
-import static org.testngApi.Utility.readPropertiesFile;
+import static org.basicutility.utils.Utility.readPropertiesFile;
 
 public class AkamaiEdgeApiAuth {
     Properties prop;

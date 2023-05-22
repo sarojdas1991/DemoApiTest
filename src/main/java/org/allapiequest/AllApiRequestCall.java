@@ -10,8 +10,8 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.util.Properties;
-import org.authentication.utils.ApiUtils;
-import static org.testngApi.Utility.readPropertiesFile;
+import org.basicutility.utils.ApiUtils;
+import static org.basicutility.utils.Utility.readPropertiesFile;
 
 public class AllApiRequestCall {
     RequestSpecification requestSpecification;
@@ -60,7 +60,7 @@ public class AllApiRequestCall {
         Assert.assertEquals(response.getStatusCode(),ApiUtils.Status_Created);
 
     }
-   @Test(priority = 3)
+   @Test(priority = 3,dependsOnMethods = {"postRequest"})
     public void getRequestById(){
         response= requestSpecification.
                 when().get(prop.getProperty("GetUserId")+id).
@@ -70,7 +70,7 @@ public class AllApiRequestCall {
 
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4,dependsOnMethods = {"postRequest"})
     public void putRequest(){
         response= requestSpecification
                 .body(requestPayload1).
@@ -80,7 +80,7 @@ public class AllApiRequestCall {
         Assert.assertEquals(response.getStatusCode(),ApiUtils.Status_Ok);
 
     }
-    @Test(priority = 5)
+    @Test(priority = 5,dependsOnMethods = {"postRequest"})
     public void deleteRequest(){
         response= requestSpecification.
                  when().delete(prop.getProperty("GetUserId")+id).

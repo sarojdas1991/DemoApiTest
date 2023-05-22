@@ -1,7 +1,7 @@
 package org.authentication.runner;
 
 import org.authentication.apitests.*;
-import org.authentication.utils.ApiReqData;
+import org.basicutility.utils.ApiReqData;
 
 public interface ApiAUthenticationCall extends ApiReqData {
     ApiKeyAuthentication apikey=new ApiKeyAuthentication();

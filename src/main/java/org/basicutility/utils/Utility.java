@@ -1,8 +1,7 @@
-package org.testngApi;
+package org.basicutility.utils;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import  org.json.JSONTokener;
+import java.io.*;
 import java.util.Properties;
 
 public class Utility {
@@ -21,5 +20,14 @@ public class Utility {
             fis.close();
         }
         return prop;
+    }
+    public void readJsonFile(){
+        File file=new File(".\\data.json");
+        try {
+            FileReader fileReader=new FileReader(file);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+//        JsonTokener jsonToken=new JsonTokener(fileReader);
     }
 }

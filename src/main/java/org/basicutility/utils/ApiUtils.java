@@ -1,4 +1,4 @@
-package org.authentication.utils;
+package org.basicutility.utils;
 
 public class ApiUtils {
 

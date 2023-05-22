@@ -3,7 +3,7 @@ package org.authentication.apitests;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.authentication.runner.ApiAUthenticationCall;
-import org.authentication.utils.ApiUtils;
+import org.basicutility.utils.ApiUtils;
 
 public class ApiKeyAuthentication implements ApiAUthenticationCall {
 

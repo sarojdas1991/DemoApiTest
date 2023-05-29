@@ -70,10 +70,11 @@
         <version>20230227</version>
     </dependency>
 
-
-
-
-
-
+    <dependency>
+        <groupId>com.github.tomakehurst</groupId>
+        <artifactId>wiremock-jre8-standalone</artifactId>
+        <version>2.35.0</version>
+        <scope>test</scope>
+    </dependency>
 </dependencies>
 </project>

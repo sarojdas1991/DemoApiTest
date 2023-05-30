@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/saroj.das/IdeaProjects/DemoApiTest">
+        <classes>
+            <class name="org.assessment.assessment1.Runner.Scenario1">
+                <methods>
+                    <include name="UploadImage"/>
+                    <include name="PostPetData"/>
+                    <include name="GetPetById"/>
+                    <include name="GetPetByStatus"/>
+                </methods>
+            </class>
+            <class name="org.assessment.assessment1.Runner.Scenario2">
+                <methods>
+                    <include name="PostPetData"/>
+                    <include name="GetPetById"/>
+                    <include name="GetPetByStatus"/>
+                    <include name="DeletePet"/>
+                </methods>
+            </class>
+            <class name="org.assessment.assessment1.Runner.Scenario3">
+                <methods>
+                    <include name="UploadImage"/>
+                    <include name="UpdatePetData"/>
+                    <include name="DeletePet"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

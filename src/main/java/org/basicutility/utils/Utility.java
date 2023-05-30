@@ -2,6 +2,8 @@ package org.basicutility.utils;
 
 import  org.json.JSONTokener;
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Properties;
 
 public class Utility {
@@ -30,4 +32,5 @@ public class Utility {
         }
 //        JsonTokener jsonToken=new JsonTokener(fileReader);
     }
+
 }

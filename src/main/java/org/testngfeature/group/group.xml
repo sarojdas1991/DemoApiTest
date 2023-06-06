@@ -1,0 +1,16 @@
+<suite name="All Test Suite">
+    <test name="GroupingTest">
+        <groups>
+            <run>
+<!--                it will run only regression group not sanity        -->
+                <include name="regression"/>
+                <exclude name="sanity"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.testngfeature.group.GroupingFeature">
+
+            </class>
+        </classes>
+    </test>
+</suite>

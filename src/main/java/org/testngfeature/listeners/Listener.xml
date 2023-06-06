@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="org.testngfeature.listeners.Listener"/>
+    </listeners>
+    <test name="listenersTest"
+          preserve-order="true" verbose="2">
+        <classes>
+            <class name="org.testngfeature.listeners.ListenerTest">
+                <methods>
+                    <include name="TestCase1"/>
+                    <include name="TestCase2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,4 +1,4 @@
-package org.assessment.assessment1.UtilityPackage;
+package org.assessment.assessment1.utilitypackage;
 
 public class AllConstants {
     public static final int Pet_Id=82707;

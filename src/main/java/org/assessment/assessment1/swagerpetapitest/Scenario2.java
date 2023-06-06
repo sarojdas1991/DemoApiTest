@@ -1,31 +1,27 @@
-package org.assessment.assessment1.Runner;
+package org.assessment.assessment1.swagerpetapitest;
 
 import org.testng.annotations.Test;
 
 import org.assessment.assessment1.allPetApiTestMethods.AllPetApiCall;
 
 public class Scenario2 {
+    AllPetApiCall allPetApiCall=new AllPetApiCall();
 
-//   @Test(priority = 2)
-//    public void UploadImage() {
-//        PetEndpoints.postPetImage();
-//
-//    }
     @Test(priority = 1)
     public void PostPetData() {
-    AllPetApiCall.postNewPetData();
+        allPetApiCall.postNewPetData();
    }
     @Test(priority = 2)
     public void GetPetById () {
-       AllPetApiCall.getPetId();
+        allPetApiCall.getPetId();
    }
     @Test(priority = 3)
     public void GetPetByStatus (){
-       AllPetApiCall.GetPetDataByStatus();
+        allPetApiCall.GetPetDataByStatus();
     }
     @Test(priority = 4)
     public void DeletePet (){
-        AllPetApiCall.DeletePetDetails();
+        allPetApiCall.DeletePetDetails();
 
     }
 

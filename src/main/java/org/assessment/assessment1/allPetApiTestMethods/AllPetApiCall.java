@@ -2,8 +2,8 @@ package org.assessment.assessment1.allPetApiTestMethods;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.assessment.assessment1.UtilityPackage.AllConstants;
-import org.assessment.assessment1.UtilityPackage.FileHandles;
+import org.assessment.assessment1.utilitypackage.AllConstants;
+import org.assessment.assessment1.utilitypackage.FileHandles;
 import org.basicutility.utils.ApiUtils;
 import org.testng.Assert;
 
@@ -13,7 +13,7 @@ public class AllPetApiCall {
     /*
     The bellow methods use for getting pet details by using petId
     */
-    public static void getPetId(){
+    public  void getPetId(){
         Response response = RestAssured
                 .given().baseUri(AllConstants.BaseUrl_Pet)
                 .get("/pet/"+ AllConstants.Pet_Id).then()
@@ -23,7 +23,7 @@ public class AllPetApiCall {
     /*
     The bellow methods use for creating new pet data
     */
-    public static void postNewPetData(){
+    public  void postNewPetData(){
         String requestPayload= FileHandles.readJson("pet.json");
         Response response = RestAssured
                 .given().baseUri(AllConstants.BaseUrl_Pet)
@@ -36,7 +36,7 @@ public class AllPetApiCall {
     /*
     The bellow methods use for uploading the petimmage
     */
-    public static void postPetImage(){
+    public  void postPetImage(){
         String fs = File.separator;
         String myPath = "src" + fs + "main"+ fs +"resources"+ fs +"testng1.png";
         File file1 = new File(myPath);
@@ -50,7 +50,7 @@ public class AllPetApiCall {
     /*
     The bellow methods use for getting pet details by using pet status
     */
-    public static void GetPetDataByStatus(){
+    public  void GetPetDataByStatus(){
         Response response = RestAssured
                 .given().baseUri(AllConstants.BaseUrl_Pet)
                 .when()
@@ -64,7 +64,7 @@ public class AllPetApiCall {
     /*
     The bellow methods use for deleting pet details by using petId
     */
-    public static void DeletePetDetails(){
+    public  void DeletePetDetails(){
         Response response = RestAssured
                 .given().baseUri(AllConstants.BaseUrl_Pet)
                 .delete("/pet/"+AllConstants.Pet_Id).then()
@@ -74,7 +74,7 @@ public class AllPetApiCall {
     /*
     The bellow methods use for updating the pet details.
     */
-    public static void updatePetData(){
+    public  void updatePetData(){
         String requestPayload= FileHandles.readJson("updatePet.json");
         Response response = RestAssured
                 .given().baseUri(AllConstants.BaseUrl_Pet)

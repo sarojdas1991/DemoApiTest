@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="a" value="2"></parameter>
+    <parameter name="b" value="3"></parameter>
+    <test name="C:/Users/saroj.das/IdeaProjects/DemoApiTest/src/main/java/org/testngfeature/parameterization/ParameterFeature.java"
+          preserve-order="true" verbose="2">
+        <classes>
+            <class name="org.testngfeature.parameterization.ParameterFeature">
+                <methods>
+                    <include name="testCase1"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

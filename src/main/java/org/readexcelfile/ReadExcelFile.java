@@ -1,8 +1,7 @@
-package org.assessment.assessment2.utility;
+package org.readexcelfile;
 
-import com.google.gson.Gson;
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -15,6 +14,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
@@ -49,10 +49,13 @@ public class ReadExcelFile {
         XSSFCell cell;
 
         List<String> rowDataList = new ArrayList<String>();
+        HashMap<String,String> excelData =new HashMap<>();
         JSONObject object=new JSONObject();
+        DataFormatter dataFormatter=new DataFormatter();
+        Row headerRow = sheet.getRow(0);
 
         Iterator rows = sheet.rowIterator();
-
+//
         while (rows.hasNext()) {
             row = (XSSFRow) rows.next();
             Iterator cells = row.cellIterator();
@@ -61,7 +64,9 @@ public class ReadExcelFile {
 
                 if (cell.getCellType() == XSSFCell.CELL_TYPE_STRING) {
                     String data=cell.getStringCellValue();
-                    rowDataList.add(data);
+//                    rowDataList.add(data);
+                    excelData.put(headerRow.toString(),data);
+
                     System.out.print(cell.getStringCellValue() + " ");
 
                 } else if (cell.getCellType() == XSSFCell.CELL_TYPE_NUMERIC) {
@@ -75,18 +80,21 @@ public class ReadExcelFile {
 
             }
            System.out.println();
-        }
-        System.out.println(rowDataList);
-        Gson gson = new Gson();
-        // convert your list to json
-        String jsonCartList = gson.toJson(rowDataList);
-        // print your generated json
-        System.out.println("jsonCartList: " + jsonCartList);
-
-        Response response = RestAssured.given().baseUri("http://restapi.adequateshop.com/api/authaccount")
-                .contentType("application/json").body(jsonCartList).when().post("/registration").then()
-                .log().all().extract().response();
-
+//        }
+        System.out.println(excelData);
+//       System.out.println(rowDataList);
+//        Gson gson = new Gson();
+//        // convert your list to json
+//        String jsonCartList = gson.toJson(rowDataList);
+//        // print your generated json
+//        System.out.println("jsonCartList: " + jsonCartList);
+//
+//        Response response = RestAssured.given().baseUri("http://restapi.adequateshop.com/api/authaccount")
+//                .contentType("application/json").body(jsonCartList).when().post("/registration").then()
+//                .log().all().extract().response();
+//        RestAssured.given().contentType(ContentType.JSON).body(jsonCartList.toString())
+//                .post("https://reqres.in/api/users").then().statusCode(201).log().all();
+//
 
     }
-}
+}}

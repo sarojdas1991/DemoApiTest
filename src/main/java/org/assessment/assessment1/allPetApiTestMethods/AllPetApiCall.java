@@ -25,6 +25,7 @@ public class AllPetApiCall {
     */
     public  void postNewPetData(){
         String requestPayload= FileHandles.readJson("pet.json");
+//        String requestPayload= FileHandles.readJson("petSwagger.json");
         Response response = RestAssured
                 .given().baseUri(AllConstants.BaseUrl_Pet)
                 .contentType("application/json").body(requestPayload).when().post("/pet").then()

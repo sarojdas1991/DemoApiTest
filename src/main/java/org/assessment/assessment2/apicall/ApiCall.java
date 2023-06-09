@@ -7,11 +7,11 @@ import org.json.JSONObject;
 import org.testng.annotations.Test;
 
 public class ApiCall {
-    ConvertExcelToJson cve =new ConvertExcelToJson();
+    ConvertExcelToJson convertExcelToJson =new ConvertExcelToJson();
     JSONObject jsonObject;
     @Test(priority = 1)
     public void readExcel() {
-         jsonObject= cve.convertExceltoJsonData();
+         jsonObject= convertExcelToJson.convertExceltoJsonData();
     }
     @Test(priority = 2)
     public void callApi(){
